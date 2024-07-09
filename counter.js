@@ -1,7 +1,7 @@
 function Counter() {
     return {
       count: 0,
-      max: 20,
+      max: 25,
 
       increment() {
         if (this.count < this.max) {
@@ -18,3 +18,5 @@ function Counter() {
       }
     };
   }
+
+  
