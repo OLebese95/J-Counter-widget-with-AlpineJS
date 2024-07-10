@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Counter Alpine</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <style>
+    .myButton {
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="container">
+    <section class="center-align">
+      <div x-data="{ title: 'Welcome' }">
+        <h1 x-text="title"></h1>
+       
+        <header>
+          <div class="container">
+          <a href="index.html" class="btn myButton">Go to Home Page</a>
+        </header>
+        <hr/>
+      </div>
+      <div x-data="counter">
+        <div>
+          <h2>Counter</h2>
+          <div class="counter" x-text="count"></div>
+          <div>
+            <button @click="increment" class="btn myButton">Count Up</button>
+            <button @click="decrement" class="btn myButton">Count Down</button>
+            <button @click="reset" class="btn red myButton">Reset</button>
+          </div>
+          <hr />
+        </div>
+      </div>
+
+      <script src="./counter.js"></script>
+      <script src="./index.js"></script>
+    </section>
+  </div>
+</body>
+
+</html>
